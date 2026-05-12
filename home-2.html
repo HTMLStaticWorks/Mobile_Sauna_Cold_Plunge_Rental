@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home 2 | NordicSpa Rentals</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { dark: '#121212', wood: '#8B5A2B', ice: '#90E0EF', beige: '#F5F5DC', stone: '#F5F5F5' }
+                    },
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .glass-header { @apply bg-white/80 backdrop-blur-md border-b border-zinc-200 dark:bg-zinc-950/80 dark:border-zinc-800; }
+            .glass-card { @apply bg-white/70 backdrop-blur-lg border border-white/20 shadow-xl dark:bg-zinc-900/70 dark:border-zinc-700/50; }
+        }
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+        details[open] summary ~ * { animation: fadeIn 0.3s ease-in-out; }
+    </style>
+</head>
+<body class="bg-slate-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100 antialiased overflow-x-hidden">
+
+    <!-- Header (Same as Home 1) -->
+    <header class="fixed w-full top-0 z-50 glass-header transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-zinc-900 dark:text-white flex items-center gap-2">
+                        <svg class="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"></path></svg>
+                        NORDIC<span class="font-light">SPA</span>
+                    </a>
+                </div>
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="nav-link text-zinc-600 hover:text-amber-600 dark:text-zinc-300 dark:hover:text-amber-400 font-medium transition-colors">Home 1</a>
+                    <a href="home-2.html" class="nav-link text-zinc-600 hover:text-amber-600 dark:text-zinc-300 dark:hover:text-amber-400 font-medium transition-colors">Home 2</a>
+                    <a href="about.html" class="nav-link text-zinc-600 hover:text-amber-600 dark:text-zinc-300 dark:hover:text-amber-400 font-medium transition-colors">About</a>
+                    <a href="blog.html" class="nav-link text-zinc-600 hover:text-amber-600 dark:text-zinc-300 dark:hover:text-amber-400 font-medium transition-colors">Blog</a>
+                    <a href="contact.html" class="nav-link text-zinc-600 hover:text-amber-600 dark:text-zinc-300 dark:hover:text-amber-400 font-medium transition-colors">Contact</a>
+                    <a href="booking.html" class="nav-link text-zinc-600 hover:text-amber-600 dark:text-zinc-300 dark:hover:text-amber-400 font-medium transition-colors">Booking</a>
+                    
+                    <div class="flex items-center space-x-4 border-l border-zinc-300 dark:border-zinc-700 pl-6">
+                        <button class="theme-toggle text-zinc-500 hover:text-amber-600 dark:text-zinc-400 dark:hover:text-amber-400">
+                            <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                            <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+                        </button>
+                        <button class="rtl-toggle text-zinc-500 hover:text-amber-600 dark:text-zinc-400 dark:hover:text-amber-400 font-bold text-sm">RTL</button>
+                        <a href="login.html" class="text-zinc-600 hover:text-amber-600 dark:text-zinc-300 dark:hover:text-amber-400 font-medium transition-colors">Login</a>
+                        <a href="booking.html" class="bg-amber-600 hover:bg-amber-700 text-white px-5 py-2 rounded-full font-medium transition-colors shadow-lg shadow-amber-600/30">Book Now</a>
+                    </div>
+                </nav>
+                <div class="md:hidden flex items-center gap-4">
+                    <button class="theme-toggle text-zinc-500 dark:text-zinc-400">
+                        <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                        <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+                    </button>
+                    <button id="menu-btn" class="text-zinc-600 dark:text-zinc-300 hover:text-amber-600 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-zinc-950 border-t border-zinc-100 dark:border-zinc-800 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-zinc-900 dark:text-white">Home 1</a>
+                <a href="home-2.html" class="block px-3 py-2 rounded-md text-base font-medium text-zinc-900 dark:text-white">Home 2</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-zinc-900 dark:text-white">About</a>
+                <a href="blog.html" class="block px-3 py-2 rounded-md text-base font-medium text-zinc-900 dark:text-white">Blog</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-zinc-900 dark:text-white">Contact</a>
+                <a href="booking.html" class="block px-3 py-2 rounded-md text-base font-medium text-zinc-900 dark:text-white">Booking</a>
+                <div class="mt-4 px-3 flex flex-col gap-2">
+                    <a href="login.html" class="text-center w-full block border border-zinc-300 dark:border-zinc-700 text-zinc-800 dark:text-zinc-200 px-4 py-2 rounded-lg">Login</a>
+                    <a href="booking.html" class="text-center w-full block bg-amber-600 text-white px-4 py-2 rounded-lg">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Split Layout Hero -->
+        <section class="min-h-[85vh] flex flex-col lg:flex-row">
+            <div class="lg:w-1/2 bg-slate-50 dark:bg-zinc-900 flex items-center p-8 lg:p-24 animate-fade-in">
+                <div class="max-w-xl mx-auto lg:ml-auto lg:mr-0">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-100 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-400 text-sm font-semibold mb-6">
+                        <span class="relative flex h-3 w-3"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span><span class="relative inline-flex rounded-full h-3 w-3 bg-cyan-500"></span></span>
+                        Now Serving Metro Areas
+                    </div>
+                    <h1 class="text-5xl lg:text-7xl font-bold mb-6 text-zinc-900 dark:text-white">Therapy That <br>Comes To You.</h1>
+                    <p class="text-xl text-zinc-600 dark:text-zinc-400 mb-8">Premium mobile sauna and cold plunge rentals. Accelerate recovery, boost your immune system, and elevate your well-being right in your driveway.</p>
+                    <div class="flex gap-4">
+                        <a href="#pricing" class="bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-lg font-medium transition-colors shadow-lg shadow-amber-600/20">View Pricing</a>
+                        <a href="about.html" class="bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-700 text-zinc-900 dark:text-white px-8 py-4 rounded-lg font-medium transition-colors">Our Story</a>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-1/2 relative min-h-[50vh] lg:min-h-full">
+                <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Relaxing Spa" class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-r from-zinc-900/50 to-transparent lg:hidden"></div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="py-12 border-y border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-zinc-200 dark:divide-zinc-800">
+                    <div>
+                        <div class="text-4xl font-bold text-amber-600 dark:text-amber-500 mb-2">500+</div>
+                        <div class="text-sm text-zinc-500 font-medium uppercase tracking-wider">Rentals Delivered</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-cyan-600 dark:text-cyan-500 mb-2">39°F</div>
+                        <div class="text-sm text-zinc-500 font-medium uppercase tracking-wider">Coldest Plunge</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-red-500 mb-2">200°F</div>
+                        <div class="text-sm text-zinc-500 font-medium uppercase tracking-wider">Max Sauna Temp</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-amber-600 dark:text-amber-500 mb-2">5★</div>
+                        <div class="text-sm text-zinc-500 font-medium uppercase tracking-wider">Customer Rating</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits -->
+        <section class="py-24 bg-slate-50 dark:bg-zinc-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6">Why Contrast Therapy?</h2>
+                    <p class="text-lg text-zinc-600 dark:text-zinc-400">Unlock your body's natural healing capabilities through guided exposure to extreme temperatures.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white dark:bg-zinc-950 p-8 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800 hover-lift">
+                        <div class="w-14 h-14 rounded-xl bg-amber-100 dark:bg-amber-900/30 text-amber-600 mb-6 flex items-center justify-center">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Accelerated Recovery</h3>
+                        <p class="text-zinc-600 dark:text-zinc-400">Flushes lactic acid and reduces muscle soreness up to 3x faster than standard rest. Essential for athletes and active lifestyles.</p>
+                    </div>
+                    <div class="bg-white dark:bg-zinc-950 p-8 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800 hover-lift">
+                        <div class="w-14 h-14 rounded-xl bg-cyan-100 dark:bg-cyan-900/30 text-cyan-600 mb-6 flex items-center justify-center">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Immune System Boost</h3>
+                        <p class="text-zinc-600 dark:text-zinc-400">Regular cold exposure increases white blood cell count, strengthening your body's natural defenses against illness.</p>
+                    </div>
+                    <div class="bg-white dark:bg-zinc-950 p-8 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800 hover-lift">
+                        <div class="w-14 h-14 rounded-xl bg-purple-100 dark:bg-purple-900/30 text-purple-600 mb-6 flex items-center justify-center">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Mental Clarity</h3>
+                        <p class="text-zinc-600 dark:text-zinc-400">Triggers a massive release of endorphins and dopamine. Reduces anxiety, improves sleep quality, and builds mental resilience.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing / Memberships -->
+        <section id="pricing" class="py-24 bg-white dark:bg-zinc-950">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6">Simple, Transparent Pricing</h2>
+                    <p class="text-lg text-zinc-600 dark:text-zinc-400">Book exactly what you need. Delivery, setup, and sanitization are always included.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                    <!-- Hourly / Short -->
+                    <div class="bg-slate-50 dark:bg-zinc-900 rounded-2xl p-8 border border-zinc-200 dark:border-zinc-800">
+                        <h3 class="text-2xl font-bold mb-2">Half Day</h3>
+                        <p class="text-zinc-500 mb-6">Perfect for a quick session.</p>
+                        <div class="text-4xl font-bold mb-6">$199<span class="text-lg text-zinc-500 font-normal">/4 hrs</span></div>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-center gap-2"><svg class="w-5 h-5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> 4-Person Cedar Sauna</li>
+                            <li class="flex items-center gap-2"><svg class="w-5 h-5 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg> Cold Plunge (Not included)</li>
+                            <li class="flex items-center gap-2"><svg class="w-5 h-5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Essential Oils</li>
+                        </ul>
+                        <a href="booking.html" class="block w-full text-center bg-white dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-700 px-4 py-3 rounded-lg font-medium transition-colors">Book Half Day</a>
+                    </div>
+                    
+                    <!-- Full Day -->
+                    <div class="bg-zinc-900 dark:bg-zinc-800 rounded-2xl p-8 border-2 border-amber-500 shadow-2xl transform scale-105 relative text-white">
+                        <div class="absolute top-0 right-0 transform translate-x-2 -translate-y-2">
+                            <span class="bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">Most Popular</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Full Day Premium</h3>
+                        <p class="text-zinc-400 mb-6">The ultimate contrast therapy setup.</p>
+                        <div class="text-4xl font-bold mb-6">$449<span class="text-lg text-zinc-400 font-normal">/24 hrs</span></div>
+                        <ul class="space-y-4 mb-8 text-zinc-200">
+                            <li class="flex items-center gap-2"><svg class="w-5 h-5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> 4-Person Cedar Sauna</li>
+                            <li class="flex items-center gap-2"><svg class="w-5 h-5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Commercial Cold Plunge</li>
+                            <li class="flex items-center gap-2"><svg class="w-5 h-5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Towels & Robes (4 sets)</li>
+                            <li class="flex items-center gap-2"><svg class="w-5 h-5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Firewood Included</li>
+                        </ul>
+                        <a href="booking.html" class="block w-full text-center bg-amber-600 hover:bg-amber-700 text-white px-4 py-3 rounded-lg font-medium transition-colors">Book Full Day</a>
+                    </div>
+
+                    <!-- Weekend -->
+                    <div class="bg-slate-50 dark:bg-zinc-900 rounded-2xl p-8 border border-zinc-200 dark:border-zinc-800">
+                        <h3 class="text-2xl font-bold mb-2">Weekend</h3>
+                        <p class="text-zinc-500 mb-6">For parties and retreats.</p>
+                        <div class="text-4xl font-bold mb-6">$899<span class="text-lg text-zinc-500 font-normal">/72 hrs</span></div>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-center gap-2"><svg class="w-5 h-5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Full Premium Setup</li>
+                            <li class="flex items-center gap-2"><svg class="w-5 h-5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Up to 8 Robes/Towels</li>
+                            <li class="flex items-center gap-2"><svg class="w-5 h-5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Guided Session (Optional)</li>
+                        </ul>
+                        <a href="booking.html" class="block w-full text-center bg-white dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-700 px-4 py-3 rounded-lg font-medium transition-colors">Book Weekend</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Coverage Map Area -->
+        <section class="py-24 bg-zinc-100 dark:bg-zinc-900 overflow-hidden relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row items-center gap-12">
+                    <div class="lg:w-1/2">
+                        <h2 class="text-3xl md:text-5xl font-bold mb-6">Service Coverage</h2>
+                        <p class="text-lg text-zinc-600 dark:text-zinc-400 mb-6">We deliver our mobile sauna trailers and cold plunges to a 50-mile radius around the Metro Area. Delivery is free within 20 miles.</p>
+                        <ul class="grid grid-cols-2 gap-4 mb-8 font-medium">
+                            <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-amber-500"></span> Metro Center</li>
+                            <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-amber-500"></span> North Suburbs</li>
+                            <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-amber-500"></span> East Side Lakes</li>
+                            <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-amber-500"></span> West Hills</li>
+                        </ul>
+                        <a href="contact.html" class="text-amber-600 font-bold hover:underline">Check your zip code &rarr;</a>
+                    </div>
+                    <div class="lg:w-1/2 relative">
+                        <div class="aspect-square rounded-full bg-amber-600/10 dark:bg-amber-600/5 absolute -inset-10 animate-pulse"></div>
+                        <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Map View" class="w-full rounded-2xl shadow-2xl relative z-10 border border-white/20">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Gallery -->
+        <section class="py-2 bg-white dark:bg-zinc-950">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
+                <img src="https://images.unsplash.com/photo-1583416750470-965b2707b355?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Gallery" class="w-full h-64 object-cover hover:opacity-80 transition-opacity">
+                <img src="https://images.unsplash.com/photo-1515405295579-ba7b45403062?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Gallery" class="w-full h-64 object-cover hover:opacity-80 transition-opacity">
+                <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Gallery" class="w-full h-64 object-cover hover:opacity-80 transition-opacity">
+                <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Gallery" class="w-full h-64 object-cover hover:opacity-80 transition-opacity">
+            </div>
+        </section>
+
+        <!-- FAQ Accordion -->
+        <section class="py-24 bg-slate-50 dark:bg-zinc-900">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6">Frequently Asked Questions</h2>
+                </div>
+                <div class="space-y-4">
+                    <details class="bg-white dark:bg-zinc-950 rounded-lg shadow-sm border border-zinc-200 dark:border-zinc-800 group" open>
+                        <summary class="flex justify-between items-center font-medium cursor-pointer p-6 list-none">
+                            <span class="text-lg">What do I need to provide for setup?</span>
+                            <span class="transition group-open:rotate-180">
+                                <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                            </span>
+                        </summary>
+                        <div class="text-zinc-600 dark:text-zinc-400 p-6 pt-0 leading-relaxed">
+                            We need a relatively flat area of at least 10x20 feet (like a driveway or firm lawn). For the cold plunge, we require access to a standard electrical outlet and a water hose spigot to fill the tub.
+                        </div>
+                    </details>
+                    <details class="bg-white dark:bg-zinc-950 rounded-lg shadow-sm border border-zinc-200 dark:border-zinc-800 group">
+                        <summary class="flex justify-between items-center font-medium cursor-pointer p-6 list-none">
+                            <span class="text-lg">How is the equipment sanitized?</span>
+                            <span class="transition group-open:rotate-180">
+                                <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                            </span>
+                        </summary>
+                        <div class="text-zinc-600 dark:text-zinc-400 p-6 pt-0 leading-relaxed">
+                            Hygiene is our top priority. The sauna is deeply cleaned with natural enzymatic cleaners between every rental. The cold plunge water is fully replaced, and the tub is scrubbed and ozone-treated before delivery.
+                        </div>
+                    </details>
+                    <details class="bg-white dark:bg-zinc-950 rounded-lg shadow-sm border border-zinc-200 dark:border-zinc-800 group">
+                        <summary class="flex justify-between items-center font-medium cursor-pointer p-6 list-none">
+                            <span class="text-lg">How hot does the sauna get?</span>
+                            <span class="transition group-open:rotate-180">
+                                <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                            </span>
+                        </summary>
+                        <div class="text-zinc-600 dark:text-zinc-400 p-6 pt-0 leading-relaxed">
+                            Our wood-fired saunas can easily reach 200°F+. However, you have complete control over the temperature by managing the fire size. We recommend 170°F-180°F for optimal contrast therapy.
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-950 text-zinc-300 border-t border-zinc-800 pt-16 pb-8 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Brand -->
+                <div>
+                    <a href="index.html" class="text-2xl font-bold text-white flex items-center gap-2 mb-6">
+                        <svg class="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"></path></svg>
+                        NORDIC<span class="font-light">SPA</span>
+                    </a>
+                    <p class="text-sm text-zinc-400 mb-6">Premium mobile sauna and cold plunge rentals delivered to your doorstep. Experience the ultimate contrast therapy for recovery and wellness.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-zinc-400 hover:text-white transition-colors"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg></a>
+                        <a href="#" class="text-zinc-400 hover:text-white transition-colors"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-white font-semibold mb-6">Quick Links</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="about.html" class="hover:text-amber-500 transition-colors">Our Story</a></li>
+                        <li><a href="home-2.html" class="hover:text-amber-500 transition-colors">Pricing & Packages</a></li>
+                        <li><a href="blog.html" class="hover:text-amber-500 transition-colors">Wellness Blog</a></li>
+                        <li><a href="contact.html" class="hover:text-amber-500 transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Service Areas -->
+                <div>
+                    <h3 class="text-white font-semibold mb-6">Service Areas</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg> Metro Area</li>
+                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg> North Suburbs</li>
+                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg> West County</li>
+                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg> Lakeside Region</li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h3 class="text-white font-semibold mb-6">Stay Updated</h3>
+                    <p class="text-sm text-zinc-400 mb-4">Subscribe for wellness tips and exclusive rental offers.</p>
+                    <form class="flex flex-col gap-3">
+                        <input type="email" placeholder="Your email address" required class="bg-zinc-900 border border-zinc-800 text-white px-4 py-2 rounded-lg focus:outline-none focus:border-amber-600 transition-colors">
+                        <button type="submit" class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-lg font-medium transition-colors">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-zinc-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-zinc-500">
+                <p>&copy; 2026 NordicSpa Rentals. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <button id="scrollTopBtn" class="fixed bottom-8 right-8 bg-amber-600 hover:bg-amber-700 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg shadow-amber-600/30 z-50">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | NordicSpa Rentals</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: { brand: { dark: '#121212', wood: '#8B5A2B', ice: '#90E0EF', beige: '#F5F5DC', stone: '#F5F5F5' } },
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .auth-glass { @apply bg-white/80 backdrop-blur-xl border border-white/40 shadow-2xl dark:bg-zinc-900/80 dark:border-zinc-700/50; }
+        }
+    </style>
+</head>
+<body class="bg-zinc-900 text-zinc-900 dark:text-zinc-100 antialiased overflow-x-hidden min-h-screen flex items-center justify-center relative">
+
+    <!-- Background -->
+    <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Background" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-zinc-900/80 backdrop-blur-sm"></div>
+    </div>
+
+    <!-- Theme Toggle (Floating) -->
+    <button class="theme-toggle absolute top-6 right-6 z-50 text-white/70 hover:text-white bg-black/20 p-2 rounded-full backdrop-blur-md border border-white/10 transition-colors">
+        <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+        <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+    </button>
+
+    <!-- RTL Toggle (Floating) -->
+    <button class="rtl-toggle absolute top-6 right-20 z-50 text-white/70 hover:text-white bg-black/20 px-3 py-1.5 rounded-full backdrop-blur-md border border-white/10 transition-colors font-bold text-xs">
+        RTL
+    </button>
+    
+    <!-- Home Button (Floating) -->
+    <a href="index.html" class="absolute top-6 left-6 z-50 text-white/70 hover:text-white bg-black/20 p-2 rounded-full backdrop-blur-md border border-white/10 transition-colors flex items-center justify-center">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+    </a>
+
+    <!-- Auth Card -->
+    <div class="relative z-10 w-full max-w-md px-4 sm:px-0 animate-fade-in">
+        <div class="auth-glass rounded-3xl p-8 sm:p-10">
+            <div class="text-center mb-8">
+                <a href="index.html" class="inline-flex items-center gap-2 text-2xl font-bold dark:text-white text-zinc-900 mb-2">
+                    <svg class="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"></path></svg>
+                    NORDIC<span class="font-light">SPA</span>
+                </a>
+                <p class="text-zinc-600 dark:text-zinc-400">Welcome back. Please enter your details.</p>
+            </div>
+
+            <form class="space-y-5">
+                <div>
+                    <label class="block text-sm font-medium mb-1.5 dark:text-zinc-300">Email Address</label>
+                    <input type="email" required placeholder="Enter your email" class="w-full bg-white/50 dark:bg-zinc-950/50 border border-zinc-300 dark:border-zinc-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-amber-500/50 focus:border-amber-500 transition-all">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-1.5 dark:text-zinc-300">Password</label>
+                    <div class="relative">
+                        <input type="password" required placeholder="••••••••" class="w-full bg-white/50 dark:bg-zinc-950/50 border border-zinc-300 dark:border-zinc-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-amber-500/50 focus:border-amber-500 transition-all pr-12">
+                        <button type="button" class="toggle-password absolute right-4 top-3.5 text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-between text-sm">
+                    <label class="flex items-center gap-2 cursor-pointer">
+                        <input type="checkbox" class="rounded border-zinc-300 text-amber-600 focus:ring-amber-500">
+                        <span class="dark:text-zinc-300">Remember me</span>
+                    </label>
+                    <a href="#" class="text-amber-600 dark:text-amber-500 font-medium hover:underline">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="w-full bg-amber-600 hover:bg-amber-700 text-white rounded-xl px-4 py-3.5 font-bold transition-colors shadow-lg shadow-amber-600/20">Sign In</button>
+            </form>
+
+            <div class="mt-8 flex items-center justify-between text-sm text-zinc-500">
+                <div class="flex-1 border-t border-zinc-300 dark:border-zinc-700"></div>
+                <span class="px-4 dark:text-zinc-400">Or continue with</span>
+                <div class="flex-1 border-t border-zinc-300 dark:border-zinc-700"></div>
+            </div>
+
+            <div class="mt-6 grid grid-cols-2 gap-4">
+                <button class="flex items-center justify-center gap-2 bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-700 rounded-xl px-4 py-2.5 transition-colors font-medium">
+                    <svg class="w-5 h-5" viewBox="0 0 24 24"><path fill="currentColor" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+                    Google
+                </button>
+                <button class="flex items-center justify-center gap-2 bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-700 rounded-xl px-4 py-2.5 transition-colors font-medium">
+                    <svg class="w-5 h-5 dark:fill-white" viewBox="0 0 24 24"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.04 2.26-.87 3.58-.8 1.14.06 2.37.5 3.1 1.48-2.65 1.6-2.12 5.09.43 6.1-1.03 2.15-1.74 4.2-2.19 5.39zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+                    Apple
+                </button>
+            </div>
+
+            <p class="mt-8 text-center text-sm dark:text-zinc-400">
+                Don't have an account? <a href="signup.html" class="text-amber-600 dark:text-amber-500 font-bold hover:underline">Sign up</a>
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
