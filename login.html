@@ -24,20 +24,20 @@
         }
     </style>
 </head>
-<body class="bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 antialiased overflow-x-hidden min-h-screen flex items-center justify-center relative">
+<body class="bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 antialiased overflow-x-hidden min-h-screen flex items-center justify-center relative py-20">
 
 
 
-    <!-- Theme Toggle (Floating) -->
-    <button class="theme-toggle absolute top-6 right-6 z-50 text-white/70 hover:text-white bg-black/20 w-9 h-9 flex items-center justify-center rounded-full backdrop-blur-md border border-white/10 transition-colors">
-        <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
-        <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
-    </button>
-
-    <!-- RTL Toggle (Floating) -->
-    <button class="rtl-toggle absolute top-6 right-[4.5rem] z-50 text-white/70 hover:text-white bg-black/20 w-9 h-9 flex items-center justify-center rounded-full backdrop-blur-md border border-white/10 transition-colors font-bold text-xs">
-        RTL
-    </button>
+    <!-- Top Actions -->
+    <div class="fixed top-10 right-10 z-50 flex items-center gap-3">
+        <button class="rtl-toggle text-white bg-zinc-900/80 hover:bg-zinc-900 w-10 h-10 flex items-center justify-center rounded-full backdrop-blur-md border border-white/20 transition-colors font-bold text-xs shadow-xl">
+            RTL
+        </button>
+        <button class="theme-toggle text-white bg-zinc-900/80 hover:bg-zinc-900 w-10 h-10 flex items-center justify-center rounded-full backdrop-blur-md border border-white/20 transition-colors shadow-xl">
+            <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+            <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+        </button>
+    </div>
     
 
     <!-- Auth Card -->

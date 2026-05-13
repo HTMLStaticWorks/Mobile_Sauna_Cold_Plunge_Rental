@@ -52,7 +52,7 @@
                         NORDIC<span class="font-light">SPA</span>
                     </a>
                 </div>
-                <nav class="hidden md:flex space-x-8 items-center">
+                <nav class="hidden lg:flex space-x-8 items-center">
                     <a href="index.html"
                         class="nav-link text-zinc-600 hover:text-amber-600 dark:text-zinc-300 dark:hover:text-amber-400 font-medium transition-colors">Home
                         1</a>
@@ -63,10 +63,10 @@
                         class="nav-link text-zinc-600 hover:text-amber-600 dark:text-zinc-300 dark:hover:text-amber-400 font-medium transition-colors">About</a>
                     <a href="blog.html"
                         class="nav-link text-zinc-600 hover:text-amber-600 dark:text-zinc-300 dark:hover:text-amber-400 font-medium transition-colors">Blog</a>
-                    <a href="contact.html"
-                        class="nav-link text-zinc-600 hover:text-amber-600 dark:text-zinc-300 dark:hover:text-amber-400 font-medium transition-colors">Contact</a>
                     <a href="booking.html"
                         class="nav-link text-zinc-600 hover:text-amber-600 dark:text-zinc-300 dark:hover:text-amber-400 font-medium transition-colors">Booking</a>
+                    <a href="contact.html"
+                        class="nav-link text-zinc-600 hover:text-amber-600 dark:text-zinc-300 dark:hover:text-amber-400 font-medium transition-colors">Contact</a>
                     <div class="flex items-center space-x-4 border-l border-zinc-300 dark:border-zinc-700 pl-6">
                         <button
                             class="theme-toggle w-9 h-9 flex items-center justify-center rounded-full text-zinc-500 hover:text-amber-600 dark:text-zinc-400 dark:hover:text-amber-400 transition-colors">
@@ -90,19 +90,16 @@
                             class="bg-amber-600 hover:bg-amber-700 text-white px-5 py-2 rounded-full font-medium transition-colors shadow-lg shadow-amber-600/30">Sign Up</a>
                     </div>
                 </nav>
-                <div class="md:hidden flex items-center gap-4">
-                    <button class="theme-toggle w-9 h-9 flex items-center justify-center rounded-full text-zinc-500 hover:text-amber-600 dark:text-zinc-400 dark:hover:text-amber-400 transition-colors">
+                <div class="lg:hidden flex items-center gap-4">
+                    <button class="theme-toggle hidden md:flex w-9 h-9 items-center justify-center rounded-full text-zinc-500 hover:text-amber-600 dark:text-zinc-400 dark:hover:text-amber-400 transition-colors">
                         <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
-                            </path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
                         </svg>
                         <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z">
-                            </path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
                         </svg>
                     </button>
+                    <button class="rtl-toggle hidden md:flex w-9 h-9 items-center justify-center rounded-full text-zinc-500 hover:text-amber-600 dark:text-zinc-400 dark:hover:text-amber-400 font-bold text-xs transition-colors">RTL</button>
                     <button id="menu-btn"
                         class="text-zinc-600 dark:text-zinc-300 hover:text-amber-600 focus:outline-none">
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -115,21 +112,31 @@
         </div>
         <!-- Mobile Menu -->
         <div id="mobile-menu"
-            class="hidden md:hidden bg-white dark:bg-zinc-950 border-t border-zinc-100 dark:border-zinc-800 absolute w-full shadow-lg">
+            class="hidden lg:hidden bg-white dark:bg-zinc-950 border-t border-zinc-100 dark:border-zinc-800 absolute w-full shadow-lg">
             <div class="px-4 pt-2 pb-6 space-y-1">
                 <a href="index.html"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-zinc-900 dark:text-white">Home 1</a>
+                    class="nav-link block px-3 py-2 rounded-md text-base font-medium text-zinc-900 dark:text-white">Home 1</a>
                 <a href="home-2.html"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-zinc-900 dark:text-white">Home 2</a>
+                    class="nav-link block px-3 py-2 rounded-md text-base font-medium text-zinc-900 dark:text-white">Home 2</a>
                 <a href="about.html"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-zinc-900 dark:text-white">About</a>
+                    class="nav-link block px-3 py-2 rounded-md text-base font-medium text-zinc-900 dark:text-white">About</a>
                 <a href="blog.html"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-zinc-900 dark:text-white">Blog</a>
-                <a href="contact.html"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-zinc-900 dark:text-white">Contact</a>
+                    class="nav-link block px-3 py-2 rounded-md text-base font-medium text-zinc-900 dark:text-white">Blog</a>
                 <a href="booking.html"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-zinc-900 dark:text-white">Booking</a>
-                <div class="mt-4 px-3 flex flex-col gap-2">
+                    class="nav-link block px-3 py-2 rounded-md text-base font-medium text-zinc-900 dark:text-white">Booking</a>
+                <a href="contact.html"
+                    class="nav-link block px-3 py-2 rounded-md text-base font-medium text-zinc-900 dark:text-white">Contact</a>
+                <div class="border-t border-zinc-200 dark:border-zinc-800 pt-4 mt-4 flex justify-between items-center px-3 md:hidden">
+                    <button class="theme-toggle w-9 h-9 flex items-center justify-center rounded-full border border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-300 transition-colors">
+                        <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                        </svg>
+                    </button>
+                    <button class="rtl-toggle w-9 h-9 flex items-center justify-center rounded-full border border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-300 font-bold text-xs">RTL</button>
+                </div>
 
                     <a href="signup.html"
                         class="text-center w-full block bg-amber-600 text-white px-4 py-2 rounded-lg">Sign Up</a>

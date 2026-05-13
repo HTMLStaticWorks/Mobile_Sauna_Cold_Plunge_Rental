@@ -51,7 +51,7 @@
                         NORDIC<span class="font-light">SPA</span>
                     </a>
                 </div>
-                <nav class="hidden md:flex space-x-8 items-center">
+                <nav class="hidden lg:flex space-x-8 items-center">
                     <a href="index.html"
                         class="nav-link text-zinc-600 hover:text-amber-600 dark:text-zinc-300 dark:hover:text-amber-400 font-medium transition-colors">Home
                         1</a>
@@ -62,10 +62,10 @@
                         class="nav-link text-zinc-600 hover:text-amber-600 dark:text-zinc-300 dark:hover:text-amber-400 font-medium transition-colors">About</a>
                     <a href="blog.html"
                         class="nav-link text-zinc-600 hover:text-amber-600 dark:text-zinc-300 dark:hover:text-amber-400 font-medium transition-colors">Blog</a>
-                    <a href="contact.html"
-                        class="nav-link text-zinc-600 hover:text-amber-600 dark:text-zinc-300 dark:hover:text-amber-400 font-medium transition-colors">Contact</a>
                     <a href="booking.html"
                         class="nav-link text-zinc-600 hover:text-amber-600 dark:text-zinc-300 dark:hover:text-amber-400 font-medium transition-colors">Booking</a>
+                    <a href="contact.html"
+                        class="nav-link text-zinc-600 hover:text-amber-600 dark:text-zinc-300 dark:hover:text-amber-400 font-medium transition-colors">Contact</a>
 
                     <div class="flex items-center space-x-4 border-l border-zinc-300 dark:border-zinc-700 pl-6">
                         <button
@@ -90,8 +90,9 @@
                             class="bg-amber-600 hover:bg-amber-700 text-white px-5 py-2 rounded-full font-medium transition-colors shadow-lg shadow-amber-600/30">Sign Up</a>
                     </div>
                 </nav>
-                <div class="md:hidden flex items-center gap-4">
-                    <button class="theme-toggle w-9 h-9 flex items-center justify-center rounded-full text-zinc-500 hover:text-amber-600 dark:text-zinc-400 dark:hover:text-amber-400 transition-colors">
+                <div class="lg:hidden flex items-center gap-4">
+                    <button
+                        class="theme-toggle hidden md:flex w-9 h-9 items-center justify-center rounded-full text-zinc-500 hover:text-amber-600 dark:text-zinc-400 dark:hover:text-amber-400 transition-colors">
                         <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
@@ -103,6 +104,7 @@
                             </path>
                         </svg>
                     </button>
+                    <button class="rtl-toggle hidden md:flex w-9 h-9 items-center justify-center rounded-full text-zinc-500 hover:text-amber-600 dark:text-zinc-400 dark:hover:text-amber-400 font-bold text-xs transition-colors">RTL</button>
                     <button id="menu-btn"
                         class="text-zinc-600 dark:text-zinc-300 hover:text-amber-600 focus:outline-none">
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -114,22 +116,32 @@
             </div>
         </div>
         <div id="mobile-menu"
-            class="hidden md:hidden bg-white dark:bg-zinc-950 border-t border-zinc-100 dark:border-zinc-800 absolute w-full shadow-lg">
+            class="hidden lg:hidden bg-white dark:bg-zinc-950 border-t border-zinc-100 dark:border-zinc-800 absolute w-full shadow-lg">
             <div class="px-4 pt-2 pb-6 space-y-1">
                 <a href="index.html"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-zinc-900 dark:text-white">Home 1</a>
+                    class="nav-link block px-3 py-2 rounded-md text-base font-medium text-zinc-900 dark:text-white">Home 1</a>
                 <a href="home-2.html"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-zinc-900 dark:text-white">Home 2</a>
+                    class="nav-link block px-3 py-2 rounded-md text-base font-medium text-zinc-900 dark:text-white">Home 2</a>
                 <a href="about.html"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-zinc-900 dark:text-white">About</a>
+                    class="nav-link block px-3 py-2 rounded-md text-base font-medium text-zinc-900 dark:text-white">About</a>
                 <a href="blog.html"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-zinc-900 dark:text-white">Blog</a>
-                <a href="contact.html"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-zinc-900 dark:text-white">Contact</a>
+                    class="nav-link block px-3 py-2 rounded-md text-base font-medium text-zinc-900 dark:text-white">Blog</a>
                 <a href="booking.html"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-zinc-900 dark:text-white">Booking</a>
+                    class="nav-link block px-3 py-2 rounded-md text-base font-medium text-zinc-900 dark:text-white">Booking</a>
+                <a href="contact.html"
+                    class="nav-link block px-3 py-2 rounded-md text-base font-medium text-zinc-900 dark:text-white">Contact</a>
+                <div class="border-t border-zinc-200 dark:border-zinc-800 pt-4 mt-4 flex justify-between items-center px-3 md:hidden">
+                    <button class="theme-toggle w-9 h-9 flex items-center justify-center rounded-full border border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-300 transition-colors">
+                        <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                        </svg>
+                    </button>
+                    <button class="rtl-toggle w-9 h-9 flex items-center justify-center rounded-full border border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-300 font-bold text-xs">RTL</button>
+                </div>
                 <div class="mt-4 px-3 flex flex-col gap-2">
-
                     <a href="signup.html"
                         class="text-center w-full block bg-amber-600 text-white px-4 py-2 rounded-lg">Sign Up</a>
                 </div>
@@ -138,36 +150,39 @@
     </header>
 
     <main class="pt-20">
-        <!-- Split Layout Hero -->
-        <section class="min-h-[85vh] flex flex-col lg:flex-row">
-            <div class="lg:w-1/2 bg-slate-50 dark:bg-zinc-900 flex items-center p-8 lg:p-24 animate-fade-in">
-                <div class="max-w-xl mx-auto lg:ml-auto lg:mr-0">
+        <!-- Full Background Hero -->
+        <section class="relative min-h-[90vh] flex items-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.pexels.com/photos/6629557/pexels-photo-6629557.jpeg" alt="Relaxing Spa"
+                    class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-zinc-900/60"></div>
+            </div>
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex justify-center">
+                <div class="max-w-3xl text-center flex flex-col items-center animate-fade-in">
                     <div
-                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-100 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-400 text-sm font-semibold mb-6">
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 text-sm font-semibold mb-6">
                         <span class="relative flex h-3 w-3"><span
                                 class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span><span
                                 class="relative inline-flex rounded-full h-3 w-3 bg-cyan-500"></span></span>
                         Now Serving Metro Areas
                     </div>
-                    <h1 class="text-5xl lg:text-7xl font-bold mb-6 text-zinc-900 dark:text-white">Therapy That <br>Comes
-                        To You.</h1>
-                    <p class="text-xl text-zinc-600 dark:text-zinc-400 mb-8">Premium mobile sauna and cold plunge
-                        rentals. Accelerate recovery, boost your immune system, and elevate your well-being right in
-                        your driveway.</p>
-                    <div class="flex gap-4">
+                    <h1 class="text-5xl md:text-7xl font-bold text-white leading-tight mb-6">
+                        Therapy That <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-600">Comes
+                            To You</span>
+                    </h1>
+                    <p class="text-xl text-zinc-300 mb-8 max-w-xl">
+                        Premium mobile sauna and cold plunge rentals. Accelerate recovery, boost your immune system, and elevate your well-being right in your driveway.
+                    </p>
+                    <div class="flex flex-wrap gap-4 justify-center">
                         <a href="#pricing"
-                            class="bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-lg font-medium transition-colors shadow-lg shadow-amber-600/20">View
+                            class="bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-full font-medium transition-all shadow-lg shadow-amber-600/20 hover-lift">View
                             Pricing</a>
                         <a href="about.html"
-                            class="bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-700 text-zinc-900 dark:text-white px-8 py-4 rounded-lg font-medium transition-colors">Our
+                            class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-full font-medium transition-all hover-lift">Our
                             Story</a>
                     </div>
                 </div>
-            </div>
-            <div class="lg:w-1/2 relative min-h-[50vh] lg:min-h-full">
-                <img src="https://images.pexels.com/photos/6629557/pexels-photo-6629557.jpeg" alt="Relaxing Spa"
-                    class="absolute inset-0 w-full h-full object-cover">
-                <div class="absolute inset-0 bg-gradient-to-r from-zinc-900/50 to-transparent lg:hidden"></div>
             </div>
         </section>
 
@@ -206,9 +221,9 @@
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div
-                        class="bg-white dark:bg-zinc-950 p-8 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800 hover-lift">
+                        class="bg-white dark:bg-zinc-950 p-8 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800 hover-lift text-center">
                         <div
-                            class="w-14 h-14 rounded-xl bg-amber-100 dark:bg-amber-900/30 text-amber-600 mb-6 flex items-center justify-center">
+                            class="w-14 h-14 rounded-xl bg-amber-100 dark:bg-amber-900/30 text-amber-600 mb-6 flex items-center justify-center mx-auto">
                             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M13 10V3L4 14h7v7l9-11h-7z"></path>
@@ -219,9 +234,9 @@
                             to 3x faster than standard rest. Essential for athletes and active lifestyles.</p>
                     </div>
                     <div
-                        class="bg-white dark:bg-zinc-950 p-8 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800 hover-lift">
+                        class="bg-white dark:bg-zinc-950 p-8 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800 hover-lift text-center">
                         <div
-                            class="w-14 h-14 rounded-xl bg-cyan-100 dark:bg-cyan-900/30 text-cyan-600 mb-6 flex items-center justify-center">
+                            class="w-14 h-14 rounded-xl bg-cyan-100 dark:bg-cyan-900/30 text-cyan-600 mb-6 flex items-center justify-center mx-auto">
                             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
@@ -233,12 +248,12 @@
                             count, strengthening your body's natural defenses against illness.</p>
                     </div>
                     <div
-                        class="bg-white dark:bg-zinc-950 p-8 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800 hover-lift">
+                        class="bg-white dark:bg-zinc-950 p-8 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800 hover-lift text-center">
                         <div
-                            class="w-14 h-14 rounded-xl bg-purple-100 dark:bg-purple-900/30 text-purple-600 mb-6 flex items-center justify-center">
+                            class="w-14 h-14 rounded-xl bg-purple-100 dark:bg-purple-900/30 text-purple-600 mb-6 flex items-center justify-center mx-auto">
                             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z">
+                                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.989-2.386l-.548-.547z">
                                 </path>
                             </svg>
                         </div>
@@ -259,7 +274,7 @@
                         sanitization are always included.</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
                     <!-- Hourly / Short -->
                     <div
                         class="bg-slate-50 dark:bg-zinc-900 rounded-2xl p-8 border border-zinc-200 dark:border-zinc-800 hover-lift">
@@ -291,7 +306,7 @@
 
                     <!-- Full Day -->
                     <div
-                        class="bg-zinc-900 dark:bg-zinc-800 rounded-2xl p-8 border-2 border-amber-500 shadow-2xl lg:scale-105 relative text-white transition-all duration-300 hover:scale-110 hover:-translate-y-2 hover:shadow-amber-500/20">
+                        class="bg-zinc-900 dark:bg-zinc-800 rounded-2xl p-8 border-2 border-amber-500 shadow-2xl relative text-white transition-all duration-300">
                         <div class="absolute top-0 right-0 transform translate-x-2 -translate-y-2">
                             <span
                                 class="bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">Most
@@ -330,7 +345,7 @@
 
                     <!-- Weekend -->
                     <div
-                        class="bg-slate-50 dark:bg-zinc-900 rounded-2xl p-8 border border-zinc-200 dark:border-zinc-800 hover-lift">
+                        class="bg-slate-50 dark:bg-zinc-900 rounded-2xl p-8 border border-zinc-200 dark:border-zinc-800 hover-lift md:col-span-2 lg:col-span-1 md:max-w-md md:mx-auto lg:max-w-none w-full">
                         <h3 class="text-2xl font-bold mb-2">Weekend</h3>
                         <p class="text-zinc-500 mb-6">For parties and retreats.</p>
                         <div class="text-4xl font-bold mb-6">$899<span class="text-lg text-zinc-500 font-normal">/72
@@ -364,12 +379,12 @@
         <section class="py-24 bg-zinc-100 dark:bg-zinc-900 overflow-hidden relative">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex flex-col lg:flex-row items-center gap-12">
-                    <div class="lg:w-1/2">
+                    <div class="lg:w-1/2 text-center flex flex-col items-center lg:text-center">
                         <h2 class="text-3xl md:text-5xl font-bold mb-6">Service Coverage</h2>
                         <p class="text-lg text-zinc-600 dark:text-zinc-400 mb-6">We deliver our mobile sauna trailers
                             and cold plunges to a 50-mile radius around the Metro Area. Delivery is free within 20
                             miles.</p>
-                        <ul class="grid grid-cols-2 gap-4 mb-8 font-medium">
+                        <ul class="grid grid-cols-2 gap-x-8 gap-y-4 mb-8 font-medium justify-center">
                             <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-amber-500"></span>
                                 Metro Center</li>
                             <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-amber-500"></span>

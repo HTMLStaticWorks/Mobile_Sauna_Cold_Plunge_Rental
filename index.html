@@ -66,7 +66,7 @@
                 </div>
 
                 <!-- Desktop Nav -->
-                <nav class="hidden md:flex space-x-8 items-center">
+                <nav class="hidden lg:flex space-x-8 items-center">
                     <a href="index.html"
                         class="nav-link text-zinc-600 hover:text-amber-600 dark:text-zinc-300 dark:hover:text-amber-400 font-medium transition-colors">Home
                         1</a>
@@ -77,10 +77,10 @@
                         class="nav-link text-zinc-600 hover:text-amber-600 dark:text-zinc-300 dark:hover:text-amber-400 font-medium transition-colors">About</a>
                     <a href="blog.html"
                         class="nav-link text-zinc-600 hover:text-amber-600 dark:text-zinc-300 dark:hover:text-amber-400 font-medium transition-colors">Blog</a>
-                    <a href="contact.html"
-                        class="nav-link text-zinc-600 hover:text-amber-600 dark:text-zinc-300 dark:hover:text-amber-400 font-medium transition-colors">Contact</a>
                     <a href="booking.html"
                         class="nav-link text-zinc-600 hover:text-amber-600 dark:text-zinc-300 dark:hover:text-amber-400 font-medium transition-colors">Booking</a>
+                    <a href="contact.html"
+                        class="nav-link text-zinc-600 hover:text-amber-600 dark:text-zinc-300 dark:hover:text-amber-400 font-medium transition-colors">Contact</a>
 
                     <div class="flex items-center space-x-4 border-l border-zinc-300 dark:border-zinc-700 pl-6">
                         <button
@@ -108,19 +108,16 @@
                 </nav>
 
                 <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center gap-4">
-                    <button class="theme-toggle w-9 h-9 flex items-center justify-center rounded-full text-zinc-500 hover:text-amber-600 dark:text-zinc-400 dark:hover:text-amber-400 transition-colors">
+                <div class="lg:hidden flex items-center gap-4">
+                    <button class="theme-toggle hidden md:flex w-9 h-9 items-center justify-center rounded-full text-zinc-500 hover:text-amber-600 dark:text-zinc-400 dark:hover:text-amber-400 transition-colors">
                         <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
-                            </path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
                         </svg>
                         <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z">
-                            </path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
                         </svg>
                     </button>
+                    <button class="rtl-toggle hidden md:flex w-9 h-9 items-center justify-center rounded-full text-zinc-500 hover:text-amber-600 dark:text-zinc-400 dark:hover:text-amber-400 font-bold text-xs transition-colors">RTL</button>
                     <button id="menu-btn"
                         class="text-zinc-600 dark:text-zinc-300 hover:text-amber-600 focus:outline-none">
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -132,25 +129,32 @@
             </div>
         </div>
 
-        <!-- Mobile Menu -->
         <div id="mobile-menu"
-            class="hidden md:hidden bg-white dark:bg-zinc-950 border-t border-zinc-100 dark:border-zinc-800 absolute w-full shadow-lg">
+            class="hidden lg:hidden bg-white dark:bg-zinc-950 border-t border-zinc-100 dark:border-zinc-800 absolute w-full shadow-lg">
             <div class="px-4 pt-2 pb-6 space-y-1">
                 <a href="index.html"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-zinc-900 dark:text-white hover:bg-zinc-50 dark:hover:bg-zinc-900">Home
+                    class="nav-link block px-3 py-2 rounded-md text-base font-medium text-zinc-900 dark:text-white hover:bg-zinc-50 dark:hover:bg-zinc-900">Home
                     1</a>
                 <a href="home-2.html"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-zinc-900 dark:text-white hover:bg-zinc-50 dark:hover:bg-zinc-900">Home
+                    class="nav-link block px-3 py-2 rounded-md text-base font-medium text-zinc-900 dark:text-white hover:bg-zinc-50 dark:hover:bg-zinc-900">Home
                     2</a>
                 <a href="about.html"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-zinc-900 dark:text-white hover:bg-zinc-50 dark:hover:bg-zinc-900">About</a>
+                    class="nav-link block px-3 py-2 rounded-md text-base font-medium text-zinc-900 dark:text-white hover:bg-zinc-50 dark:hover:bg-zinc-900">About</a>
                 <a href="blog.html"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-zinc-900 dark:text-white hover:bg-zinc-50 dark:hover:bg-zinc-900">Blog</a>
-                <a href="contact.html"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-zinc-900 dark:text-white hover:bg-zinc-50 dark:hover:bg-zinc-900">Contact</a>
+                    class="nav-link block px-3 py-2 rounded-md text-base font-medium text-zinc-900 dark:text-white hover:bg-zinc-50 dark:hover:bg-zinc-900">Blog</a>
                 <a href="booking.html"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-zinc-900 dark:text-white hover:bg-zinc-50 dark:hover:bg-zinc-900">Booking</a>
-                <div class="border-t border-zinc-200 dark:border-zinc-800 pt-4 mt-4 flex justify-between px-3">
+                    class="nav-link block px-3 py-2 rounded-md text-base font-medium text-zinc-900 dark:text-white hover:bg-zinc-50 dark:hover:bg-zinc-900">Booking</a>
+                <a href="contact.html"
+                    class="nav-link block px-3 py-2 rounded-md text-base font-medium text-zinc-900 dark:text-white hover:bg-zinc-50 dark:hover:bg-zinc-900">Contact</a>
+                <div class="border-t border-zinc-200 dark:border-zinc-800 pt-4 mt-4 flex justify-between items-center px-3 md:hidden">
+                    <button class="theme-toggle w-9 h-9 flex items-center justify-center rounded-full border border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-300 transition-colors">
+                        <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                        </svg>
+                    </button>
                     <button class="rtl-toggle w-9 h-9 flex items-center justify-center rounded-full border border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-300 font-bold text-xs">RTL</button>
                 </div>
                 <div class="mt-4 px-3 flex flex-col gap-2">
@@ -187,13 +191,13 @@
                         Premium sauna trailers and cold plunge tubs delivered directly to your home or event. Elevate
                         your recovery, boost immunity, and unwind in pure luxury.
                     </p>
-                    <div class="flex flex-wrap gap-4 justify-center">
+                    <div class="flex flex-wrap gap-4 justify-center w-full max-w-md mx-auto">
                         <a href="booking.html"
-                            class="bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-full font-medium text-lg transition-all shadow-lg shadow-amber-600/30 hover-lift">
+                            class="w-full sm:w-auto text-center bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-full font-medium text-lg transition-all shadow-lg shadow-amber-600/30 hover-lift">
                             Book Your Experience
                         </a>
                         <a href="home-2.html"
-                            class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-full font-medium text-lg transition-all hover-lift">
+                            class="w-full sm:w-auto text-center bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-full font-medium text-lg transition-all hover-lift">
                             View Packages
                         </a>
                     </div>
@@ -212,7 +216,7 @@
                         recovery, backyard party, or corporate wellness retreat.</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Package 1 -->
                     <div
                         class="glass-card rounded-2xl overflow-hidden hover-lift flex flex-col h-full animate-fade-in delay-100 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800">
@@ -220,7 +224,7 @@
                             <img src="https://images.unsplash.com/photo-1583416750470-965b2707b355?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                                 alt="Sauna" class="w-full h-full object-cover">
                         </div>
-                        <div class="p-8 flex flex-col flex-grow">
+                        <div class="p-8 flex flex-col flex-grow text-center">
                             <div
                                 class="uppercase text-amber-600 dark:text-amber-500 font-bold text-sm tracking-wider mb-2">
                                 The Essential</div>
@@ -232,11 +236,8 @@
                                 <span class="text-xl font-bold">$299<span
                                         class="text-sm text-zinc-500 font-normal">/day</span></span>
                                 <a href="booking.html"
-                                    class="text-amber-600 dark:text-amber-500 font-medium hover:underline flex items-center gap-1">Reserve
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M9 5l7 7-7 7"></path>
-                                    </svg></a>
+                                    class="bg-amber-600 hover:bg-amber-700 text-white px-5 py-2 rounded-full font-medium transition-colors text-sm">Reserve
+                                    Now</a>
                             </div>
                         </div>
                     </div>
@@ -251,7 +252,7 @@
                             <img src="https://images.pexels.com/photos/36420274/pexels-photo-36420274.jpeg"
                                 alt="Contrast Therapy" class="w-full h-full object-cover">
                         </div>
-                        <div class="p-8 flex flex-col flex-grow">
+                        <div class="p-8 flex flex-col flex-grow text-center">
                             <div
                                 class="uppercase text-amber-600 dark:text-amber-500 font-bold text-sm tracking-wider mb-2">
                                 The Ultimate</div>
@@ -263,7 +264,7 @@
                                 <span class="text-xl font-bold">$449<span
                                         class="text-sm text-zinc-500 font-normal">/day</span></span>
                                 <a href="booking.html"
-                                    class="bg-amber-600 hover:bg-amber-700 text-white px-5 py-2 rounded-full font-medium transition-colors">Reserve
+                                    class="bg-amber-600 hover:bg-amber-700 text-white px-5 py-2 rounded-full font-medium transition-colors text-sm">Reserve
                                     Now</a>
                             </div>
                         </div>
@@ -271,12 +272,12 @@
 
                     <!-- Package 3 -->
                     <div
-                        class="glass-card rounded-2xl overflow-hidden hover-lift flex flex-col h-full animate-fade-in delay-300 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800">
+                        class="glass-card rounded-2xl overflow-hidden hover-lift flex flex-col h-full animate-fade-in delay-300 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 md:col-span-2 lg:col-span-1 md:max-w-md md:mx-auto lg:max-w-none">
                         <div class="img-scale-container h-64">
                             <img src="https://images.pexels.com/photos/11179573/pexels-photo-11179573.jpeg"
                                 alt="Event Rental" class="w-full h-full object-cover">
                         </div>
-                        <div class="p-8 flex flex-col flex-grow">
+                        <div class="p-8 flex flex-col flex-grow text-center">
                             <div
                                 class="uppercase text-amber-600 dark:text-amber-500 font-bold text-sm tracking-wider mb-2">
                                 Group & Events</div>
@@ -288,11 +289,8 @@
                                 <span class="text-xl font-bold">$899<span
                                         class="text-sm text-zinc-500 font-normal">/wknd</span></span>
                                 <a href="contact.html"
-                                    class="text-amber-600 dark:text-amber-500 font-medium hover:underline flex items-center gap-1">Inquire
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M9 5l7 7-7 7"></path>
-                                    </svg></a>
+                                    class="bg-amber-600 hover:bg-amber-700 text-white px-5 py-2 rounded-full font-medium transition-colors text-sm">Inquire
+                                    Now</a>
                             </div>
                         </div>
                     </div>
@@ -418,20 +416,20 @@
                             class="w-10 h-10 rounded-full bg-white/20 text-white flex items-center justify-center mb-6 font-bold">
                             2</div>
                         <h3 class="text-xl font-bold mb-4">Intermediate</h3>
-                        <ul class="space-y-3 text-amber-100">
-                            <li class="flex items-center gap-2"><svg class="w-5 h-5 text-white" fill="currentColor"
+                        <ul class="space-y-3 text-white">
+                            <li class="flex items-center gap-2"><svg class="w-5 h-5 text-amber-200" fill="currentColor"
                                     viewBox="0 0 20 20">
                                     <path
                                         d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z">
                                     </path>
                                 </svg> Sauna: 180°F (15 mins)</li>
-                            <li class="flex items-center gap-2"><svg class="w-5 h-5 text-white" fill="currentColor"
+                            <li class="flex items-center gap-2"><svg class="w-5 h-5 text-cyan-200" fill="currentColor"
                                     viewBox="0 0 20 20">
                                     <path
                                         d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z">
                                     </path>
                                 </svg> Plunge: 42°F (1-2 mins)</li>
-                            <li class="flex items-center gap-2"><svg class="w-5 h-5 text-white" fill="currentColor"
+                            <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green-300" fill="currentColor"
                                     viewBox="0 0 20 20">
                                     <path
                                         d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z">
