@@ -71,12 +71,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Header active state
     const navLinks = document.querySelectorAll('.nav-link');
-    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+    let currentPath = window.location.pathname.split('/').pop();
+    if (!currentPath || currentPath === '/') currentPath = 'index.html';
     
     navLinks.forEach(link => {
-        if (link.getAttribute('href') === currentPath) {
-            link.classList.add('text-amber-600', 'dark:text-amber-400');
-            link.classList.remove('text-zinc-600', 'dark:text-zinc-300');
+        const href = link.getAttribute('href');
+        if (href === currentPath) {
+            if (link.closest('#mobile-menu')) {
+                // Mobile/Tablet active state - Highlighting
+                link.classList.add('bg-amber-50', 'dark:bg-amber-900/20', 'text-amber-600', 'dark:text-amber-400', 'border-l-4', 'border-amber-600', 'pl-4', 'pr-3');
+                link.classList.remove('px-3', 'text-zinc-900', 'dark:text-white');
+            } else {
+                // Desktop active state
+                link.classList.add('text-amber-600', 'dark:text-amber-400', 'font-semibold');
+                link.classList.remove('text-zinc-600', 'dark:text-zinc-300');
+            }
         }
     });
 
